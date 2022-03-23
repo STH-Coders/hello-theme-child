@@ -1,32 +1,20 @@
 /*
-Theme Name: Hello Elementor Modified Child
-Theme URI: https://github.com/STH-Coders/hello-elementor-modified-child
-Description: Hello Elementor Modified Child is a child theme of Hello Elementor, created by STHCoders.
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/STH-Coders/hello-theme-child
+Description: Hello Elementor Child is a child theme of Hello Elementor, adapted by the STHCoders Team from the original by the Elementor Team.
 Author: STHCoders Dev Team
 Author URI: https://github.com/STH-Coders
 Template: hello-elementor
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: hello-elementor-child
 License: GNU General Public License v3 or later.
-License URI: https://www.gnu.org/licenses/gpl-3.0.md
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 */
 
-/* Box sizing rules */
-* *::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/* Remove default margin */
-* {
-	margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
+/* Document level adjustments */
+html {
+	line-height: 1.875;
 }
 
 /* Set core root defaults */
@@ -36,12 +24,113 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-	line-height: 1.5;
+	font-family: 'FF Tisa Sans Pro', 'Average Sans', 'Merriweather Sans',
+		'Source Sans Pro', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.875;
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	text-rendering: optimizeSpeed;
-	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizespeed;
+}
+
+/* Modules will scale with document */
+header {
+	font-size: 1.25rem;
+	line-height: 1.6;
+}
+
+footer {
+	font-size: 0.85rem;
+	line-height: 1.643;
+}
+
+/* Heading H1-H6 Styling */
+h1 {
+	font-family: Iceberg, Bauhaus, 'Basic Sans Serif 7', Rothwell, 'Times New Roman',
+		serif;
+	font-size: 4.5em;
+	letter-spacing: 3px;
+	line-height: 1.506;
+	overflow-wrap: break-word;
+}
+
+h2 {
+	font-family: Dosis, Fabiolo, 'Blogger Sans', Helvetica, Arial, sans-serif;
+	font-size: 3.2em;
+	letter-spacing: 1.5px;
+	line-height: 1.569;
+	overflow-wrap: break-word;
+}
+
+h3 {
+	font-family: Dosis, Fabiolo, 'Blogger Sans', Helvetica, Arial, sans-serif;
+	font-size: 2.6em;
+	letter-spacing: 1.5px;
+	line-height: 1.617;
+	overflow-wrap: break-word;
+}
+
+h4 {
+	font-family: Dosis, Fabiolo, 'Blogger Sans', Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	letter-spacing: 1.5px;
+	line-height: 1.688;
+	overflow-wrap: break-word;
+}
+
+h5 {
+	font-family: Dosis, Fabiolo, 'Blogger Sans', Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	letter-spacing: 1.4px;
+	line-height: 1.76;
+	overflow-wrap: break-word;
+}
+
+h6 {
+	font-family: 'Exo 2', Oxygen, Lato, Roboto, sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 1.4px;
+	line-height: 1.8;
+	overflow-wrap: break-word;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+p {
+	font-family: 'FF Tisa Sans Pro', 'Average Sans', 'Merriweather Sans',
+		'Source Sans Pro', Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 0.933;
+	letter-spacing: 1.2px;
+	overflow-wrap: break-word;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Link Styling */
+
+a {
+	color: #e86b18;
+}
+
+a:active,
+a:hover {
+	color: #f98c19;
+}
+
+a:visited {
+	color: #c05e00;
 }
 
 /* A elements that don't have a class get default styles */
@@ -50,30 +139,56 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
+img {
+	display: block;
+}
+
 picture,
 video,
 canvas,
 svg {
 	display: block;
+	border-style: none;
+	height: auto;
 	max-width: 100%;
 }
 
-/* Inherit fonts for inputs */
+/* Inherit fonts for inputs and buttons */
 input,
+button,
 textarea,
 select {
 	font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
+@media (min-width: 480px) and (max-width: 768px) {
+	body {
+		font-size: 17px;
+		line-height: 1.765;
+	}
+
+	header {
+		line-height: 1.666;
+	}
+
+	footer {
+		line-height: 1.786;
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 18px;
+		line-height: 1.833;
+	}
+
+	header {
+		line-height: 1.783;
+	}
+
+	footer {
+		line-height: 1.933;
+	}
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -92,163 +207,9 @@ h6 {
 	}
 }
 
-/* Document level adjustments */
-html {
-	font-size: 14px;
-}
-
-@media (min-width: 421px) and (max-width: 900px) {
-	html {
-		font-size: 16px;
-	}
-}
-
-@media (min-width: 901px) {
-	html {
-		font-size: 18px;
-	}
-}
-
-/* Modules will scale with document */
-.site-header {
-	font-size: 1.4rem;
-}
-
-.site-footer {
-	font-size: 0.75rem;
-}
-
 .site-sidebar {
-	font-size: 0.85rem;
-}
-
-/* Heading H1-H6 Styling */
-h1 {
-	font-family: "Iceberg",
-		"Garamond",
-		"Times New Roman",
-		Times,
-		serif;
-	color: #EFEFEF;
-	font-weight: 600;
-	text-transform: lowercase;
-	font-style: normal;
-	font-size: 4.5em;
-	line-height: 2em;
-	letter-spacing: 3px;
-}
-
-h2 {
-	font-family: "Dosis",
-		"Proxima Nova",
-		"Helvetica Neue",
-		"Helvetica",
-		"Arial",
-		sans-serif;
-	color: #EFEFEF;
-	font-weight: 500;
-	text-transform: uppercase;
-	font-style: normal;
-	font-size: 3.2em;
-	letter-spacing: 1.5px;
-}
-
-h3 {
-	font-family: "Dosis",
-		"Proxima Nova",
-		"Helvetica Neue",
-		"Helvetica",
-		"Arial",
-		sans-serif;
-	color: #EFEFEF;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-style: normal;
-	font-size: 2.6em;
-	letter-spacing: 1.5px;
-}
-
-h4 {
-	font-family: "Dosis",
-		"Proxima Nova",
-		"Helvetica Neue",
-		"Helvetica",
-		"Arial",
-		sans-serif;
-	color: #EFEFEF;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-style: normal;
-	font-size: 1.8em;
-	letter-spacing: 1.5px;
-}
-
-h5 {
-	font-family: "Dosis",
-		"Proxima Nova",
-		"Helvetica Neue",
-		"Helvetica",
-		"Arial",
-		sans-serif;
-	color: #EFEFEF;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-style: normal;
-	font-size: 1.4em;
-	letter-spacing: 1.4px;
-}
-
-h6 {
-	font-family: "Exo 2",
-		serif;
-	color: #EFEFEF;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-style: normal;
-	font-size: 1.1em;
-	letter-spacing: 1.4px;
-}
-
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-	margin-top: 0
-}
-
-p {
-	font-family: "Lato",
-		"Proxima Nova",
-		"Helvetica Neue",
-		"Helvetica",
-		"Arial",
-		sans-serif;
-	font-weight: 300;
-	font-size: 1em;
-	text-transform: none;
-	font-style: normal;
-	letter-spacing: 1.2px;
-	margin: 0
-}
-
-/* Link Styling */
-a {
-	color: #C05E00;
-}
-
-a:active,
-a:hover {
-	color: #f98c19;
-}
-
-button {
-	font-family: "Exo 2",
-		serif;
-	font-size: 1em;
-	font-weight: normal;
-	text-transform: uppercase;
+	font-size: 0.95rem;
+	line-height: 1.562;
 }
 
 .footer-anchor {
@@ -261,4 +222,16 @@ button {
 	margin-right: auto;
 	width: 75%;
 	height: auto;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+	.site-sidebar {
+		line-height: 1.625;
+	}
+}
+
+@media (min-width: 768px) {
+	.site-sidebar {
+		line-height: 1.647;
+	}
 }

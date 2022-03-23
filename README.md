@@ -31,8 +31,17 @@ Hello Elementor Modified Child includes support for WooCommerce.
 
 Yes, **_but_** best practice is to use the styling capabilities in the Elementor plugin. If you would rather bundle your own custom fonts, you could consider using the [FontManager plugin](https://github.com/STH-Coders/FontManager).
 
-== Copyright ==
+== Attributions ==
 
+This adaptation of Hello Elementor Child uses the STHCoders CSS reset, a minimalist reset with heavy influence from two existing popular CSS resets.
+
+1. The [Modern CSS Reset](https://piccalil.li/blog/a-modern-css-reset/), also known as the Picalilli Reset, created by Andy Bell and distributed under the MIT license.
+
+2. The [Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/), created by Josh Comeau and released without restriction into the public domain.
+
+STHCoders appreciates the creativity and generosity of open-source developers like Andy and Josh, who have freely contributed their intellectual property to the public,ultimately helping to make the Internet and the world a better place. Thank you!
+
+== Copyright ==
 
 Hello Elementor Modified Child is a custom child theme of the [Hello Elementor](https://wordpress.org/themes/hello-elementor) theme. This theme, like WordPress and the Hello Elementor main theme, is licensed under the GPL and distributed under the terms of the GNU GPL v3 or later.
 
@@ -50,7 +59,6 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 
 == Changelog ==
 

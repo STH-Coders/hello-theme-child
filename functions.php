@@ -3,6 +3,7 @@
  * Theme functions and definitions.
  *
  * @param mixed $return
+ * @param mixed $title
  */
 
 /*
@@ -11,26 +12,49 @@
  * @return void
  */
 
-// Load child theme css and optional scripts.
+// Load child theme css and optional scripts. //
 
-function ele_disable_page_title($return)
+// Hide the Archive Title Prefix -- Credit: Ben Gillbanks //
+function sth_hide_the_archive_title($title)
 {
-    return false;
-}
-add_filter('hello_elementor_page_title', 'ele_disable_page_title');
-
-add_filter('get_the_archive_title', function ($title) {
-    if (is_category()) {
-        $title = single_cat_title('', false);
-    } elseif (is_tag()) {
-        $title = single_tag_title('', false);
-    } elseif (is_author()) {
-        $title = '<span class="vcard">'.get_the_author().'</span>';
+    // Skip if the site isn't LTR, this is visual, not functional.
+    // Should try to work out an elegant solution that works for both directions.
+    if (is_rtl()) {
+        return $title;
+    }
+    // Split the title into parts so we can wrap them with spans.
+    $title_parts = explode(': ', $title, 2);
+    // Glue it back together again.
+    if (!empty($title_parts[1])) {
+        $title = wp_kses(
+            $title_parts[1],
+            [
+                'span' => [
+                    'class' => [],
+                ],
+            ]
+        );
+        $title = '<span class="screen-reader-text">'.esc_html($title_parts[0]).': </span>'.$title;
     }
 
     return $title;
-});
+}
+    add_filter('get_the_archive_title', 'sth_hide_the_archive_title');
 
+// Disable comments on images //
+function sth_filter_media_comment_status($open, $post_id)
+{
+    $post = get_post($post_id);
+    if ('attachment' == $post->post_type) {
+        return false;
+    }
+
+    return $open;
+}
+add_filter('comments_open', 'sth_filter_media_comment_status', 10, 2);
+
+
+// Custom “search results for:” archive title //
 function archive_callback($title)
 {
     $str = 'Here\'s What We Found About: ';
@@ -42,17 +66,21 @@ function archive_callback($title)
 }
 add_filter('elementor/utils/get_the_archive_title', 'archive_callback');
 
+
+// Add the menu widgets option //
 if (function_exists('register_sidebar')) {
     register_sidebar();
 }
 
-// Enable WordPress Custom Fields
+
+// Enable ACF Custom Fields //
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
-function hello_elementor_custom_child_enqueue_scripts()
+// Enqueue custom scripts and styles //
+function hello_elementor_child_enqueue_scripts()
 {
     wp_enqueue_style(
-        'hello-elementor-custom-child-style',
+        'hello-elementor-child-style',
         get_stylesheet_directory_uri().'/style.css',
         [
             'hello-elementor-theme-style',
@@ -60,4 +88,4 @@ function hello_elementor_custom_child_enqueue_scripts()
         '1.0.0'
     );
 }
-add_action('wp_enqueue_scripts', 'hello_elementor_custom_child_enqueue_scripts', 20);
+add_action('wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20);
