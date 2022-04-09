@@ -126,11 +126,11 @@ a {
 
 a:active,
 a:hover {
-	color: #f98c19;
+	color: #ed7c2b;
 }
 
 a:visited {
-	color: #c05e00;
+	color: #a24a10;
 }
 
 /* A elements that don't have a class get default styles */

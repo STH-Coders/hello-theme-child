@@ -39,7 +39,8 @@ function hide_the_archive_title($title)
 
     return $title;
 }
-    add_filter('get_the_archive_title', 'hide_the_archive_title');
+add_filter('get_the_archive_title', 'hide_the_archive_title');
+
 
 // Disable comments on images //
 function filter_media_comment_status($open, $post_id)
@@ -52,6 +53,22 @@ function filter_media_comment_status($open, $post_id)
     return $open;
 }
 add_filter('comments_open', 'filter_media_comment_status', 10, 2);
+
+
+// estimated reading time
+function reading_time()
+{
+    $content = get_post_field('post_content', $post->ID);
+    $word_count = str_word_count(strip_tags($content));
+    $readingtime = ceil($word_count / 200);
+    if (1 == $readingtime) {
+        $timer = ' minute';
+    } else {
+        $timer = ' minutes';
+    }
+
+    return $readingtime.$timer;
+}
 
 // Custom “search results for:” archive title //
 function archive_callback($title)
