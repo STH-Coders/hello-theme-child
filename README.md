@@ -1,4 +1,4 @@
-=== Hello Theme Child (Modified) ===
+=== Hello Elementor Modified Child ===
 
 Contributors: elementor, KingYes, ariel.k, jzaltzberg, mati1000, bainternet, STH-Coders, killshot13 Requires at least: WordPress 4.7 Tested up to: WordPress 5.8 Version: 1.0.0 Requires PHP: 5.4 License: GNU General Public License v3 or later License URI: <https://www.gnu.org/licenses/gpl-3.0.html> Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 
@@ -33,7 +33,7 @@ Yes, **_but_** best practice is to use the styling capabilities in the Elementor
 
 == Attributions ==
 
-This adaptation of Hello Elementor Child uses the STHCoders CSS reset, a minimalist reset with heavy influence from two existing popular CSS resets.
+This adaptation of the [original Hello Elementor Child theme](https://github.com/elementor/hello-theme-child) uses the STHCoders CSS reset, a minimalist reset with heavy influence from two existing popular CSS resets.
 
 1. The [Modern CSS Reset](https://piccalil.li/blog/a-modern-css-reset/), also known as the Picalilli Reset, created by Andy Bell and distributed under the MIT license.
 
@@ -43,22 +43,17 @@ STHCoders appreciates the creativity and generosity of open-source developers li
 
 == Copyright ==
 
-Hello Elementor Modified Child is a custom child theme of the [Hello Elementor](https://wordpress.org/themes/hello-elementor) theme. This theme, like WordPress and the Hello Elementor main theme, is licensed under the GPL and distributed under the terms of the GNU GPL v3 or later.
+This theme is a custom child theme of [Hello Elementor](https://wordpress.org/themes/hello-elementor) and was forked from the [original Hello Elementor Child theme](https://github.com/elementor/hello-theme-child). Like its predecessors, as well as WordPress itself, Hello Elementor Modified Child is licensed under the GPL.
 
-    Copyright (C) 2021 [STHCoders Dev Team].
+Hello Elementor Modified Child bundles the following third-party resources:
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Font Awesome icons for theme screenshot
+License: SIL Open Font License, version 1.1.
+Source: https://fontawesome.com/v4.7.0/
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Image for theme screenshot, Copyright Jason Blackeye
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/4B83RD7BV9
 
 == Changelog ==
 
