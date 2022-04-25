@@ -27,7 +27,7 @@ Most users will not need to edit the files for customizing this theme. To custom
 
 However, if you have a particular need to adapt this theme, please read on.
 
-### == Frequently Asked Questions ==
+### = Frequently Asked Questions =
 
 **Does this theme support any plugins?**
 
@@ -37,14 +37,12 @@ Hello Elementor Modified Child includes support for WooCommerce.
 
 Yes, **_but_** best practice is to use the styling capabilities in the Elementor plugin. If you would rather bundle your own custom fonts, you could consider using the [FontManager plugin](https://github.com/STH-Coders/FontManager).
 
-
-### === Changelog ==
+### = Changelog =
 
 = 1.0.0 - 2021-12-16 =
 - Initial Public Release
 
-
-### == Attributions ==
+### = Attributions =
 
 This adaptation of the [original Hello Elementor Child theme](https://github.com/elementor/hello-theme-child) uses the STHCoders CSS reset, a minimalist reset with heavy influence from two existing popular CSS resets.
 
@@ -54,7 +52,7 @@ This adaptation of the [original Hello Elementor Child theme](https://github.com
 
 STHCoders appreciates the creativity and generosity of open-source developers like Andy and Josh, who have freely contributed their intellectual property to the public,ultimately helping to make the Internet and the world a better place. Thank you!
 
-### == Copyright ==
+### = Copyright =
 
 This theme is a custom child theme of [Hello Elementor](https://wordpress.org/themes/hello-elementor) and was forked from the [original Hello Elementor Child theme](https://github.com/elementor/hello-theme-child). Like its predecessors, as well as WordPress itself, Hello Elementor Modified Child is licensed under the GPL.
 
