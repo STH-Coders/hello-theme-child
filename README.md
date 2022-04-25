@@ -1,4 +1,4 @@
-=== Hello Elementor Modified Child ===
+=== Hello Theme Child (Modified) ===
 
 Contributors: elementor, KingYes, ariel.k, jzaltzberg, mati1000, bainternet, STH-Coders, killshot13 Requires at least: WordPress 4.7 Tested up to: WordPress 5.8 Version: 1.0.0 Requires PHP: 5.4 License: GNU General Public License v3 or later License URI: <https://www.gnu.org/licenses/gpl-3.0.html> Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 
